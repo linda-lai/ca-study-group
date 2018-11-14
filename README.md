@@ -24,6 +24,7 @@ All contributors will have full read/write access so you can push updates straig
     - **[Configuring Git to Sync to Fork](#Configuring-Git-to-Fork)**
 - **[Updating Your Forked Repository](#Updating-Your-Forked-Repository)**
 - **[Pushing Updates to GitHub](#Pushing-Updates-to-GitHub)**
+    - **[Folder and Filing Conventions](#Folder-and-Filing-Conventions)**
 
 ## <a id="Initial-Setup"></a>Initial Setup
 Before you set up your fork and remote, decide where you want this to be saved on your local computer.
