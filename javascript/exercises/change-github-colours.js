@@ -21,6 +21,11 @@ function changeColour () {
     }
 }
 
+//And to make a cool animation:
+
+setInterval(() => {
+    changeColour()
+}, 500);
 
 
 
