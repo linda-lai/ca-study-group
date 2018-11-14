@@ -60,7 +60,7 @@ To create a clone of your fork locally on your computer:
 5. Type `git clone`, and then paste the URL you copied:
    
     ```
-    $ git clone hgit@github.com:YOUR_USERNAME/ca-study-group.git
+    $ git clone git@github.com:YOUR_USERNAME/ca-study-group.git
     ```
 
 6. Press Enter. A local clone will now be created on your computer.
