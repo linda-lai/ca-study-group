@@ -10,6 +10,8 @@ Any and all contributions are welcome - consider this our very first open source
 ## Contributors
 Please DM me if you'd like to be added to the repo as a contributor.
 
+You'll receive an invite from GitHub which you'll need to accept first to have the correct permissions.
+
 All contributors will have full read/write access so you can push updates straight away. 
 
 ### Important
@@ -24,6 +26,12 @@ All contributors will have full read/write access so you can push updates straig
 - **[Pushing Updates to GitHub](#Pushing-Updates-to-GitHub)**
 
 ## <a id="Initial-Setup"></a>Initial Setup
+Before you set up your fork and remote, decide where you want this to be saved on your local computer.
+
+Create this folder somewhere meaningful so that once you have setup the remote, you can push updates automatically using the [Updating Your Forked Repository](#Updating-Your-Forked-Repository) and [Pushing Updates to GitHub](#Pushing-Updates-to-GitHub) instructions.
+
+**Note: When you clone a repository to your computer, GitHub will create a folder for the repo and copy the cloned files into this folder. Avoid renaming or moving this folder otherwise you will need to set up the remote again.**
+
 ### <a id="Forking"></a>Forking
 While logged into your GitHub account, navigate to the **ca-study-group** repository and hit the *Fork* button in the top-right hand corner:
 
@@ -72,8 +80,8 @@ To setup the connection to allow GitHub to pull updates from the original  *upst
 5. Type `git remote -v` and press Enter to see the current configured remote repository:
 
     ```
-    origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
-    origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+    origin  git@github.com:YOUR_USERNAME/ca-study-group.git (fetch)
+    origin  git@github.com:YOUR_USERNAME/ca-study-group.git (push)
     ```
 
 6. Type in `git remote add upstream` and paste in the URL copied from the original (not forked) repository and hit enter. It should look like:
@@ -85,10 +93,10 @@ To setup the connection to allow GitHub to pull updates from the original  *upst
 7. To confirm the new upstream repository has been correctly set up for your fork, type `git remote -v` again. It should show the URL for your fork as the origin and the original repository as the upstream.
 
     ```
-    origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
-    origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
-    upstream  https://github.com/linda-lai/ca-study-group.git (fetch)
-    upstream  https://github.com/linda-lai/ca-study-group.git (push)
+    origin    git@github.com:YOUR_USERNAME/ca-study-group.git (fetch)
+    origin    git@github.com:YOUR_USERNAME/ca-study-group.git (push)
+    upstream  git@github.com:linda-lai/ca-study-group.git (fetch)
+    upstream  git@github.com:linda-lai/ca-study-group.git (push)
     ```
 
 ## <a id="Updating-Your-Forked-Repository"></a>Updating Your Forked Repository
@@ -97,13 +105,20 @@ To download the latest files from the original repo:
 1. Check your forked repository to confirm if there have been additional updates made. If there have been updates, GitHub will show the below message:
    *"This branch is [X] commits behind linda-lai:master."*
 
-2. To download the latest files to your local computer, enter:
+**Note: Make sure you are on your master branch before pulling from the upstream (original) repository.**
+
+2. To check your current branch:
+   ```
+   $ git branch
+   ```
+
+3.  While on your master branch, to download the latest files to your local computer, enter:
     ```
     $ git pull upstream master
     ```
 This will download the latest version of the files to your computer.
 
-3. To push the latest files from the original GitHub repo to your forked repo, enter:
+4. To push the latest files from the original GitHub repo to your forked repo, enter:
 
     ```
     $ git push origin master
@@ -145,18 +160,29 @@ Once you've updated your forked repo and downloaded the latest files to your loc
    $ git add [FILENAME-1] [FILENAME-2]
    ```
 
-4. Commit the changes:
+5. Commit the changes:
    ```
    git commit -m "[COMMENTS RELATED TO UPDATE]"
    ```
 
-5. Push the update to the main repo:
+6. Push the update to the main repo:
    ```
    $ git push origin [BRANCH-NAME]
    ```
 
-6. Voila! The changes will be pushed to the main repo.
+7. Voila! The changes will be pushed to the main repo.
 
 To download the updated repo files to your local computer and push to your GitHub account, follow the steps outlined in the **[Updating Your Forked Repository](#Updating-Your-Forked-Repository)** section.
+
+### <a id="Folder-and-Filing-Conventions"></a>Folder and Filing Conventions
+To keep things manageable and findable (and to be nice to your fellow contributors), please label for file or leave comments with your name so we know who's contributed the file without having to dig through the logs.
+
+For example:
+
+```
+js-fundamentals-q1-linda.js
+```
+
+That way, if you find a solution or notes that you'd like to rubberduck with the owner, you can easily find out who.
 
 Any questions, shout out!
