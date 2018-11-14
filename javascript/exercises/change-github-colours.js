@@ -21,6 +21,11 @@ function changeColour () {
     }
 }
 
+//And to make a cool animation:
+
+window.setInterval(() => {
+    changeColour()
+}, 1000 / 60);
 
 
 
