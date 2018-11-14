@@ -60,7 +60,7 @@ To create a clone of your fork locally on your computer:
 5. Type `git clone`, and then paste the URL you copied:
    
     ```
-    $ git clone https://github.com/YOUR-USERNAME/ca-study-group
+    $ git clone hgit@github.com:YOUR_USERNAME/ca-study-group.git
     ```
 
 6. Press Enter. A local clone will now be created on your computer.
@@ -88,7 +88,7 @@ To setup the connection to allow GitHub to pull updates from the original  *upst
 6. Type in `git remote add upstream` and paste in the URL copied from the original (not forked) repository and hit enter. It should look like:
 
     ```
-    $ git remote add upstream https://github.com/linda-lai/ca-study-group.git
+    $ git remote add upstream git@github.com:linda-lai/ca-study-group.git
     ```
 
 7. To confirm the new upstream repository has been correctly set up for your fork, type `git remote -v` again. It should show the URL for your fork as the origin and the original repository as the upstream.
@@ -113,7 +113,12 @@ To download the latest files from the original repo:
    $ git branch
    ```
 
-3.  While on your master branch, to download the latest files to your local computer, enter:
+3. Checkout so that you are on your master branch (if you aren't already):
+    ```
+    $ git checkout master
+    ```
+
+4.  While on your master branch, to download the latest files to your local computer, enter:
     ```
     $ git pull upstream master
     ```
