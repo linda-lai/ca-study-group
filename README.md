@@ -76,22 +76,22 @@ To setup the connection to allow GitHub to pull updates from the original  *upst
 
 ![Cloning](/assets/github-configuring-remote.png)
 
-1. Open Terminal and change directories into the folder where you have cloned the local files to.
+4. Open Terminal and change directories into the folder where you have cloned the local files to.
 
-2. Type `git remote -v` and press Enter to see the current configured remote repository:
+5. Type `git remote -v` and press Enter to see the current configured remote repository:
 
     ```
     origin  git@github.com:YOUR_USERNAME/ca-study-group.git (fetch)
     origin  git@github.com:YOUR_USERNAME/ca-study-group.git (push)
     ```
 
-3. Type in `git remote add upstream` and paste in the URL copied from the original (not forked) repository and hit enter. It should look like:
+6. Type in `git remote add upstream` and paste in the URL copied from the original (not forked) repository and hit enter. It should look like:
 
     ```
     $ git remote add upstream https://github.com/linda-lai/ca-study-group.git
     ```
 
-4. To confirm the new upstream repository has been correctly set up for your fork, type `git remote -v` again. It should show the URL for your fork as the origin and the original repository as the upstream.
+7. To confirm the new upstream repository has been correctly set up for your fork, type `git remote -v` again. It should show the URL for your fork as the origin and the original repository as the upstream.
 
     ```
     origin    git@github.com:YOUR_USERNAME/ca-study-group.git (fetch)
