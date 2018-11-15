@@ -26,7 +26,3 @@ function changeColour () {
 setInterval(() => {
     changeColour()
 }, 500);
-
-
-
-
