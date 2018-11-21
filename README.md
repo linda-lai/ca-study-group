@@ -8,11 +8,15 @@ Coding is hard, pushing to GitHub even scarier. The repo is a space to practice 
 Any and all contributions are welcome - consider this our very first open source project!
 
 ## Contributors
+|<p align="center">[![Linda Lai](/assets/contributors-linda-lai-70x70.jpg)</p>](https://github.com/linda-lai) | <p align="center">[![Vanessa Nimmo](/assets/contributors-vanessa-nimmo-70x70.jpg)](https://github.com/VanessaNimmo) </p> |  <p align="center">[![Diego Rodriguez](/assets/contributors-diegorodriguez2018-70x70.jpg)</p>](https://github.com/DiegoRodriguez2018) |
+|-----------|---------------|---------------- |
+| Linda Lai | Vanessa Nimmo | Diego Rodriguez |
+
 Please DM me if you'd like to be added to the repo as a contributor.
 
 You'll receive an invite from GitHub which you'll need to accept first to have the correct permissions.
 
-All contributors will have full read/write access so you can push updates straight away. 
+All contributors will have full read/write access so you can push updates straight away.
 
 ### Important
 **As all contributors automatically have read/write access, please check that you have the latest version of the repository cloned locally to your laptop before pushing changes so existing updates aren't overridden! 🤗**
