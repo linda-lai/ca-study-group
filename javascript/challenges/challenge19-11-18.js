@@ -11,7 +11,7 @@
 // create several books for the bookshelf
 
 const container =  document.querySelector('#shelf-div')
-
+const shelves =[]
 class Shelf{
     constructor(){
         const ul = document.createElement('ul')

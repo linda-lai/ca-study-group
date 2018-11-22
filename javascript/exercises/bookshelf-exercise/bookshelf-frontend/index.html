@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script defer src="js/index.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav class="navigation">
+        <a href="/">Home</a>
+    </nav>
+    <main>
+        <!-- note that the name has to be the same that the ones in the db -->
+        <form id="bookForm">
+            <p>
+                <label for="title">title</label>
+                <input type="text" name="title">
+            </p>
+
+            <p>
+                <label for="ISBN">ISBN</label>
+                <input type="text" name="isbn">
+            </p>
+
+            <p>
+                <label for="description">description </label>
+                <input type="textarea" name="description">
+            </p>
+
+            <p>
+                <label for="price">price</label>
+                <input type="number" name="price">
+            </p>
+
+            <p>
+                <label for="author">author</label>
+                <input type="text" name="author">
+            </p>
+
+            <p>
+                <input type="submit" value="Create Book">
+            </p>
+
+
+        </form>
+        <ul class="books" id="books">
+            <p class="loader">Loading books.....</p>
+        </ul>
+    </main>
+    <aside>
+        <h2>Top Authors</h2>
+        <ol class="authors"> </ol>
+    </aside>
+
+</body>
+
+</html>
