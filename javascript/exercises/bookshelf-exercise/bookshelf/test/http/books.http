@@ -1,0 +1,17 @@
+
+POST http://localhost:3000/books HTTP/1.1
+
+content-type: application/json
+{"id": 3,
+  "title": "Harry Potter and the Philosopher's Stone : Illustrated Edition",
+  "isbn": "1408845644",
+  "author": "J. K. Rowling",
+  "price": 1325,
+  "description": "cool book"
+}
+
+
+GET http://localhost:3000/books
+
+#  This comes from the REST Client extension documentation. 
+#  note that we do http not https because is not a secure connection. 4
