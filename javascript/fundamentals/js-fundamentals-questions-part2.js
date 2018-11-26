@@ -15,54 +15,76 @@
 // https://www.youtube.com/watch?v=8aGhZQkoFbQ
 // (It's ok if you don't follow this fully - just get the general idea and you'll be ahead of most junior JS coders.)
 
-// This is a function call, and within it is a callback that we define. We don't know how Express provides what it does, but it does some bulk work with some http requests and dealing with XHR, and then hands over control to us to fiddle at the edges. We set the path, and then Express provides us the request and response objects - much like we provided the multiplication calculation to our callback in Problem 1. Our outer function there was trivial, but the functioning is the much same - except for being synchronous. That is, the outer function does some work and then passes that work to the callback as an argument. We then had an argument in our callback created by this outer function being run (which is synchronous code, unlike Express), and we then acted on this in the callback. In the case of Express they let you set the path when you call their function, they do some asynchronous magic behind the scenes and then they hand over control of the request and response objects to your callback function, which you then customise and deal with (within the Express spec functionality), while also doing any other logic you require. 
-// In this instance (Express) it is important to note that the functionality within the main function (out of sight) is asynchronous - Express waits for input from the user and when it receives this input it runs the relevant function and does what it needs to do, but while this is happening it hands back control to the rest of the code (meaning that a user can still use the page while the function is doing its work). When their function completes it produces its req and res, and then after that our callback is run and we deal with the req and res objects as required. 
-// This is a bit like in Problem 6 where the code continues after hitting the asynchronous function, although in that case we didn't pass anything to the callback as an argument.
-// How this actually works in the browser is a little complex, but this is a brilliant talk that gives you the flavour of this in a digestible form --
-// https://www.youtube.com/watch?v=8aGhZQkoFbQ
-// (It's ok if you don't follow this fully - just get the general idea and you'll be ahead of most junior JS coders.)
-
 // Problem 10 (promises)
 // Again this is a bit more a code-along. Here I want you to simply write out the following code, and try to make sense of each line as you go through it. I would recommend adding your own comments to the code. 
 
-// console.log("Problem 10”)
-// console.time('problem-10’)
+console.log("Problem 10")
+console.time('problem-10')
 
-// const promiseLooper = function(cb) {
-//     for(i=0; i<1000000000; i++){
-//     }
-//     console.log("In promise looper")
-//     console.log("After promise loop!")
-//     return cb()
-// }
+const promiseLooper = function() {
+    ourPromise = new Promise(function(resolve, reject) {
+        console.log("In promise looper")
+        if (true) {
+            for(i=0; i<1000000000; i++){
+                x = Math.random()
+            }
+            console.log("After promise loop!")
+            resolve("Here is the data after the LOOP")
+        }
+        else {
+            reject("This will never happen in this function!")
+        }
+    })
+    return ourPromise   
+}
 
-// promiseLooper(() => {
-//     console.timeEnd('problem-10’)
-//     return console.log("Finished 10”)
-// })
+promiseLooper()
+    .then(function(dataInsidePromise) {
+        console.log(dataInsidePromise)
+        console.timeEnd('problem-10')
+        return console.log("Finished 10")
+    })
+    .catch(function(error) {
+        console.error("Why will this not appear?")
+    })
 
-// console.log("After promise looper")
-// console.log("==================")
+console.log("After sync promise looper")
+console.log("==================")
 
-// Problem 11 (promises)
+// Problem 11 (promises, asynchronous)
 
-// console.log("Problem 11”)
-// console.time('problem-11’)
+console.log("Problem 11")
+console.time('problem-11')
 
-// const promiseTimeouter = (cb) => {
-//     setTimeout(function() {
-//         console.log('After promise setTimeout!')
-//         return cb()
-//     }, 6000)
-//     console.log('In promise timeouter')
-// }
+const promiseTimoutAsync = function() {
+    ourPromise = new Promise(function(resolve, reject) {
+        console.log("In promise looper")
+        if (true) {
+            setTimeout(function() {
+                console.log('After setTimeout!')
+                console.log("..now passing through to the promise..")
+                resolve("Here is the data from the ASYNC")
+            }, 6000)
+        }
+        else {
+            reject("This will never happen in this function!")
+        }
+    })
+    return ourPromise   
+}
 
-// console.log("After promise timeouter")
+promiseTimoutAsync()
+    .then(function(dataInsidePromise) {
+        console.log(dataInsidePromise)
+        console.timeEnd('problem-11')
+        return console.log("Finished 11")
+    })
+    .catch(function(error) {
+        console.error("Why will this not appear?")
+    })
 
-// promiseTimeouter(() => {
-//     console.timeEnd('problem-11’)
-//     return console.log("Finished 11”)
-// })
+console.log("After *async* promise looper")
+console.log("==================")
 
 // Now it’s your turn. In the next few problems we are going to use promises - because we can. It won’t make these functions asynchronous, and it’s not really necessary. But it’s a pattern to become familiar with, and very much worth learning. 
 // You will need to follow the same pattern from the above questions. You need to define your function and have it return a promise. Then you will call that function and get at the data. I would like you to play with it a bit. Try returning different things from the resolve and reject. Tinker with the code.
@@ -77,7 +99,7 @@
 // *Problem 14*
 // Write a function that takes an array of numbers, and returns a promise. If the array contains any strings the function should throw an error, otherwise it should resolve with the largest number in the array.
 
-// The preceding functions were synchronous - they will run in the same way as the Ruby we have been writing does. Each line of code completes before passing on to the next line. As we have discussed, some functions in JS are asynchronous by default. setTimeout is one that we have seen. File operations can be. But we are studying web programming, and so the most common one that we will run into is fetch. It’s asynchronous for good reason: we don’t want it to block the running of the code while it reaches out over the internet to get some data. We don’t have to deal with adding the promise to the way fetch runs - a promise is returned from fetch as a default. You can then use the pattern that we have been practicing to get at the data that is returned. 
+// The preceding functions were synchronous - they will run in the same way as the Ruby we have been writing does. Each line of code completes before passing on to the next line. As we have discussed, some functions in JS are asynchronous by default. setTimeout is one that we have seen. File operations can be. But we are studying web programming, and so the most common one that we will run into is fetch (if you are running in node, then you will need to require in node-fetch: const fetch = require('node-fetch'), and to 'npm install node-fetch' in terminal). It’s asynchronous for good reason: we don’t want it to block the running of the code while it reaches out over the internet to get some data. We don’t have to deal with adding the promise to the way fetch runs - a promise is returned from fetch as a default. You can then use the pattern that we have been practicing to get at the data that is returned. 
 
 // *Problem 15*
 // I want you to use this URL: 'https://randomuser.me/api/?results=10'
