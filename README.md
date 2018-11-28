@@ -8,9 +8,9 @@ Coding is hard, pushing to GitHub even scarier. The repo is a space to practice 
 Any and all contributions are welcome - consider this our very first open source project!
 
 ## Contributors
-|[![Linda Lai](/assets/contributors-linda-lai-70x70.jpg)](https://github.com/linda-lai) | [![Vanessa Nimmo](/assets/contributors-vanessa-nimmo-70x70.jpg)](https://github.com/VanessaNimmo) | [![Diego Rodriguez](/assets/contributors-diegorodriguez2018-70x70.jpg)](https://github.com/DiegoRodriguez2018) |
-|-----------|---------------|---------------- |
-| Linda Lai | Vanessa Nimmo | Diego Rodriguez |
+|[![Linda Lai](/assets/contributors-linda-lai-70x70.jpg)](https://github.com/linda-lai) | [![Vanessa Nimmo](/assets/contributors-vanessa-nimmo-70x70.jpg)](https://github.com/VanessaNimmo) | [![Diego Rodriguez](/assets/contributors-diegorodriguez2018-70x70.jpg)](https://github.com/DiegoRodriguez2018) | [![Timothy Cole](/assets/contributors-timothydcole-70x70.jpg)](https://github.com/timothydcole)| [![Corey Hellwege](/assets/contributors-coreyhellwege-70x70.jpg)](https://github.com/coreyhellwege)
+|-----------|---------------|---------------- |---------------- |---------------- |
+| Linda Lai | Vanessa Nimmo | Diego Rodriguez | Timothy Cole    | Corey Hellwege 
 
 Please DM me if you'd like to be added to the repo as a contributor.
 
@@ -134,7 +134,7 @@ This will download the latest version of the files to your computer.
     $ git push origin master
     ```
 
-## <a id="Pushing--Updates-to-GitHub"></a>Pushing Your Updates to GitHub
+## <a id="Pushing-Updates-to-GitHub"></a>Pushing Your Updates to GitHub
 Once you've updated your forked repo and downloaded the latest files to your local computer:
 
 1. Create a new branch or checkout to an existing branch to work from.
