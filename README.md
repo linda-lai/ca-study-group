@@ -180,7 +180,15 @@ Once you've updated your forked repo and downloaded the latest files to your loc
    $ git push origin [BRANCH-NAME]
    ```
 
-7. Voila! The changes will be pushed to the main repo.
+7. Voila! The changes will be pushed to your forked repo.
+   
+8. To merge the changes to origin (the main repository), you will need to navigate to your fork in GitHub and raise a new pull request.
+   
+   As you have read/write access, you'll be able to merge these changes immediately (no need for the changes to be approved).
+
+   Provided there are no conflicts you need to resolve, you'll be able to merge them right away by hitting the *Confirm merge* button.
+
+![Pull Requests](/assets/github-pull-request.png)
 
 To download the updated repo files to your local computer and push to your GitHub account, follow the steps outlined in the **[Updating Your Forked Repository](#Updating-Your-Forked-Repository)** section.
 
