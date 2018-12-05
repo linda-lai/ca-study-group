@@ -1,0 +1,99 @@
+/* // Colors */
+$green: #0DFF82;
+$blue: #2FECF7;
+$gray: #ededed;
+
+* {
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	padding: 3em;
+}
+
+body {
+	background: linear-gradient(to left top, $blue, $green);
+	background-repeat: no-repeat;
+}
+
+form {
+	background-color: white;
+	border-radius: 20px;
+	-webkit-box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
+	-moz-box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
+	box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
+	padding: 2.5em; // may remove later
+}
+
+h2 {
+	text-align: center;
+	font-size: 28px;
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+@media screen and (min-width: 700px) {
+	.large-group {
+		display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+	}
+	
+	.small-group {
+		width: 45%;
+	}
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input, select {
+	padding: 10px 16px;
+	width: 100%;
+	outline: 0;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	border: 0;
+	background-color: $gray;
+	font-size: 14px;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+}
+
+.textarea-div {
+	width: 100%;
+}
+
+textarea {
+	padding: 10px;
+	width: 100%;
+	outline: 0;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	border: 0;
+	background-color: $gray;
+	font-size: 14px;
+	height: 100px;
+}
+
+.btn { 
+	background-color: $green;
+	padding: 12px 15px;
+	width: 100%;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	transition: 0.3s all ease;
+	
+	&:hover {
+		background-color: $blue;
+	}
+}

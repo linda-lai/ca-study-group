@@ -1,10 +1,23 @@
 # *Ruby Drills*
 
-# Sometimes you learn how to do things before you fully understand how they work. Coding is like this a lot. There are many things that I learned how to do well before I asked how they function. There are still plenty more things where that is the case for me. You merely push back that barrier slowly, but the unknown remains. In that vein, these are exercises that are designed to get you familiar with the lingo of arrays, hashes, and classes and objects, and get you repeatedly using them. It’s not a test, or even a challenge - it’s practice. Consider it like doing a forehand drill in tennis, or scales in music. You wouldn’t be upset making some mistakes while you practice, because you know that this is the thing you need to work toward being competent, and you allow yourself to fail and learn. This is exactly the same.
+# Sometimes you learn how to do things before you fully understand how they work.
+# Coding is like this a lot. There are many things that I learned how to do well before I asked how they function.
+# There are still plenty more things where that is the case for me. You merely push back that barrier slowly, but the unknown remains.
+# In that vein, these are exercises that are designed to get you familiar with the lingo of arrays, objects, and functions, and get you repeatedly using them.
+# It’s not a test, or even a challenge - it’s practice. Consider it like doing a forehand drill in tennis, or scales in music.
+# You wouldn’t be upset making some mistakes while you practice, because you know that this is the thing you need to work toward being competent, and you allow yourself to fail and learn.
+# This is exactly the same.
 
-# Learn and fail as you need here, because the bigger tests are to come. As you get more comfortable with the basic syntax, and getting your code to work, you will have more brain space to think about what it is it all means. (And we are more than happy to keep explaining that at the same time too!)
+# Learn and fail as you need here, because the bigger tests are to come.
+# As you get more comfortable with the basic syntax, and getting your code to work, you will have more brain space to think about what it is it all means.
+# (And we are more than happy to keep explaining that at the same time too!)
 
-# Follow the instructions carefully. They will be repetitive and are not designed to be interesting, but rather build up ‘muscle memory’. *Each* line of code that you write, you *must* save the file and run the code. If there are *any* errors, you fix them then and there. If in doubt, puts out the structure you have made to make sure that it is what you hoped it was. I’m looking for accuracy - I want the instructions followed precisely. It will be your choice of class and variable names (etc), but the functioning and number of attributes called for are immutable. Ideally you’ll want the work to be checked, so copy and paste this text into a file and comment it out, so that I can check it easily - put the answer directly below the question.
+# Follow the instructions carefully. They will be repetitive and are not designed to be interesting, but rather build up ‘muscle memory’.
+# *Each* line of code that you write, you *must* save the file and run the code. If there are *any* errors, you fix them then and there.
+# If in doubt, puts out the structure you have made to make sure that it is what you hoped it was.
+# I’m looking for accuracy - I want the instructions followed precisely.
+# It will be your choice of class and variable names (etc), but the functioning and number of attributes called for are immutable.
+# Ideally you’ll want the work to be checked, so copy and paste this text into a file and comment it out, so that I can check it easily - put the answer directly below the question.
 
 # 1. Make a method that takes two arguments, and returns the result of them added together.
 
